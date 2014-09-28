@@ -1,0 +1,33 @@
+body {
+  background: #f9b200 url(bg.png) repeat-x;
+}
+
+#headline-container {
+  margin-bottom: 5px;
+}
+
+#headline-container strong {
+  display: block;
+}
+
+#login-box {
+  margin: 0 auto;
+  width: 450px;
+  top: 110px;
+  position: relative;
+}
+
+#login-form,
+#messagebox-container {
+  background-color: #fff;
+  border: 1px #f08a00 solid;
+}
+
+#logo-container {
+  vertical-align: middle;
+}
+
+#logo {
+  width: 128px;
+  height: 128px;
+}
