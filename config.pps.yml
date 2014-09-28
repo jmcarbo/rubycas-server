@@ -8,7 +8,7 @@
 # (e.g. https://login.example.net/). The uri_path option lets you serve it from a 
 # different path (e.g. https://login.example.net/cas).
 
-uri_path: /cas
+#uri_path: /cas
 server: webrick
 port: 80
 
@@ -37,7 +37,7 @@ database:
 # that its database schema is up-to-date. To disable this behaviour set
 # the following option to true:
 
-disable_auto_migrations: true
+#disable_auto_migrations: true
 
 ##### AUTHENTICATION ###########################################################
 
