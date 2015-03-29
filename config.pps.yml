@@ -43,7 +43,7 @@ database:
 
 authenticator:
   class: CASServer::Authenticators::LDAP
-  extra_attributes: cn, mail
+  extra_attributes: uid, cn, mail, sn, givenName
   ldap:
     host: ldap-1-p.piratenpartei.ch
     port: 389
