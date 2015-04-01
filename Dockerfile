@@ -13,11 +13,20 @@ RUN cd /rubycas-server && bundle install
 ADD config.pps.yml  /etc/rubycas-server.yml
 ADD run.sh /run.sh
 
-ENV MYSQL_PORT_5432_TCP_ADDR mysql-1-p.piratenpartei.ch
+#ENV MYSQL_PORT_3306_TCP_ADDR mysql
 ENV MYSQL_USERNAME casserver
 ENV MYSQL_DATABASE casserver
 ENV MYSQL_PASSWORD casserver
 
+#ENV LDAP_PORT_389_TCP_ADDR ldap
+#ENV LDAP_PORT_389_TCP_PORT 389
+ENV LDAP_PASSWORD root
+ENV LDAP_BASEDN dc=piratenpartei,dc=ch
+ENV LDAP_BINDDN cn=mdbgui,dc=piratenpartei,dc=ch
+ENV LDAP_FILTER (objectClass=ppsPerson)
+ENV LDAP_UID uid
+
+ENV CAS_EXTRA_ATTRIBUTES uid, cn, mail, sn, givenName
 
 EXPOSE 80
 WORKDIR /rubycas-server

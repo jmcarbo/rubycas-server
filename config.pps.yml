@@ -43,14 +43,14 @@ database:
 
 authenticator:
   class: CASServer::Authenticators::LDAP
-  extra_attributes: uid, cn, mail, sn, givenName
+  extra_attributes: PLACEHOLDER_CAS_EXTRA_ATTRIBUTES
   ldap:
-    host: ldap-1-p.piratenpartei.ch
-    port: 389
-    base: dc=piratenpartei,dc=ch
-    filter: (objectClass=ppsPerson)
-    username_attribute: uid
-    auth_user: cn=mdbgui,dc=piratenpartei,dc=ch
+    host: PLACEHOLDER_LDAP_HOST
+    port: PLACEHOLDER_LDAP_PORT
+    base: PLACEHOLDER_LDAP_BASEDN
+    filter: PLACEHOLDER_LDAP_FILTER
+    username_attribute: PLACEHOLDER_LDAP_UID
+    auth_user: PLACEHOLDER_LDAP_BINDDN
     auth_password: PLACEHOLDER_LDAP_PASSWORD
 
 ##### LOOK & FEEL ##############################################################
